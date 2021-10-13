@@ -61,8 +61,13 @@ public class LoginOtp extends AppCompatActivity {
                                 editor.putString("user_name", userData.getString("first_name") + " " + userData.getString("last_name"));
                                 editor.putString("user_type", userData.getString("user_type"));
                                 editor.apply();
-                                Intent i = new Intent(LoginOtp.this, UserDashboard.class);
-                                startActivity(i);
+                                if (userData.getString("user_type").equals("2")) {
+                                    Intent i = new Intent(LoginOtp.this, VolunteerDashboard.class);
+                                    startActivity(i);
+                                } else {
+                                    Intent i = new Intent(LoginOtp.this, UserDashboard.class);
+                                    startActivity(i);
+                                }
                             } else if (obj.getString("status").equals("400")){
                                 txt_otp_err.setText(obj.getString("error"));
                             }

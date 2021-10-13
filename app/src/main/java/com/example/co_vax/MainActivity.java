@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, UserDashboard.class);
                 startActivity(i);
             } else {
-                Intent i = new Intent(MainActivity.this, UserDashboard.class);
+                Intent i = new Intent(MainActivity.this, VolunteerDashboard.class);
                 startActivity(i);
             }
         }

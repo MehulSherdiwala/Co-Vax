@@ -138,6 +138,8 @@ public class UserDashboard extends AppCompatActivity {
                 edit.remove("user_id");
                 edit.remove("user_type");
                 edit.apply();
+                Intent i = new Intent(UserDashboard.this, MainActivity.class);
+                startActivity(i);
             }
         });
 
@@ -151,7 +153,7 @@ public class UserDashboard extends AppCompatActivity {
         btn_dose2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(UserDashboard.this, Search.class);
+                Intent i = new Intent(UserDashboard.this, VolunteerDashboard.class);
                 startActivity(i);
             }
         });
